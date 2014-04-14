@@ -41,6 +41,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestWebEngine.Core\TestWebEngine.Core.csproj">
+      <Project>{e48dec78-f39d-49be-bdb0-ca7a41ec5f7b}</Project>
+      <Name>TestWebEngine.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestWebEngine.Data\TestWebEngine.Data.csproj">
+      <Project>{4d08fd73-96d4-4aa0-9f27-125467bd282e}</Project>
+      <Name>TestWebEngine.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

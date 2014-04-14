@@ -47,6 +47,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestWebEngine.Core\TestWebEngine.Core.csproj">
+      <Project>{e48dec78-f39d-49be-bdb0-ca7a41ec5f7b}</Project>
+      <Name>TestWebEngine.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestWebEngine.Data\TestWebEngine.Data.csproj">
+      <Project>{4d08fd73-96d4-4aa0-9f27-125467bd282e}</Project>
+      <Name>TestWebEngine.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestWebEngine.Services\TestWebEngine.Services.csproj">
+      <Project>{40c72169-8f8e-4df3-b3ba-b0bd60db796c}</Project>
+      <Name>TestWebEngine.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
