@@ -38,11 +38,10 @@ namespace TestWebEngine.Web
             bundleTable.Add(new ScriptBundle("~/Scripts/bootstrap")
                 .Include("~/Scripts/bootstrap.js"));
             bundleTable.Add(new ScriptBundle("~/Scripts/jquery")
-                .Include("~/Scripts/jquery-2.1.0.intellisense.js",
-                            "~/Scripts/jquery-2.1.0.js"));
-            bundleTable.Add(new StyleBundle("~/Scripts/jquery-ui")
+                .Include("~/Scripts/jquery-2.1.0.js"));
+            bundleTable.Add(new ScriptBundle("~/Scripts/jquery-ui")
                 .Include("~/Scripts/jquery-ui-1.10.4.js"));
-            bundleTable.Add(new StyleBundle("~/Scripts/jquery-signalR")
+            bundleTable.Add(new ScriptBundle("~/Scripts/jquery-signalR")
                 .Include("~/Scripts/jquery.signalR-2.0.3.js"));
             bundleTable.Add(new ScriptBundle("~/Scripts/jquery-unobtrusive")
                 .Include("~/Scripts/jquery.unobtrusive-ajax.js"));
@@ -65,6 +64,10 @@ namespace TestWebEngine.Web
                 "~/Scripts/angular-sanitize.js",
                 "~/Scripts/angular-scenario.js",
                 "~/Scripts/angular-touch.js"));
+
+            bundleTable.Add(new ScriptBundle("~/Scripts/Custom/Home")
+                .Include("~/Scripts/Custom/Home/app.js",
+                    "~/Scripts/Custom/Home/controllers.js"));
             #endregion
 
             #endregion
