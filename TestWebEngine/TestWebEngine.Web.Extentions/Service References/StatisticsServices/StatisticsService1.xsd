@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:2028/StatisticsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/TestWebEngine.Service.Statistics" />
+  <xs:element name="UpdateStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="score" nillable="true" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateStatisticsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatistics">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/TestWebEngine.Service.Statistics" minOccurs="0" name="GetStatisticsResult" nillable="true" type="q1:StatisticsType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

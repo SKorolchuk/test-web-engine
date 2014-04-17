@@ -20,12 +20,18 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebEngine.Libs.Tests", "TestWebEngine.Libs.Tests\TestWebEngine.Libs.Tests.csproj", "{A83E6705-F603-4DAD-888C-72ACB923DE10}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebEngine.Web.Tests", "TestWebEngine.Web.Tests\TestWebEngine.Web.Tests.csproj", "{A0060143-732F-4B81-B984-3DDC9115CB26}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3C91909-070F-4A87-B4C9-D52AD408061E} = {B3C91909-070F-4A87-B4C9-D52AD408061E}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{9D129D22-E333-4D6C-9BA6-52C7F58EFA9D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebEngine.Util", "TestWebEngine.Util\TestWebEngine.Util.csproj", "{DD5D0BC0-C901-44EC-A048-9229A9941BA7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebEngine.Web.Extentions", "TestWebEngine.Web.Extentions\TestWebEngine.Web.Extentions.csproj", "{EDAE833D-BE3E-4CF4-92E4-A5C8DBF41579}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B3C91909-070F-4A87-B4C9-D52AD408061E} = {B3C91909-070F-4A87-B4C9-D52AD408061E}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebEngine.Service.Statistics", "TestWebEngine.Service.Statistics\TestWebEngine.Service.Statistics.csproj", "{B3C91909-070F-4A87-B4C9-D52AD408061E}"
 EndProject

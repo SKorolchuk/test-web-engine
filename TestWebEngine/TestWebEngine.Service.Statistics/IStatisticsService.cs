@@ -13,6 +13,9 @@ namespace TestWebEngine.Service.Statistics
     {
         [OperationContract]
         bool UpdateStatistics(DateTime? date, double? score);
+
+        [OperationContract]
+        StatisticsType GetStatistics();
     }
 
 

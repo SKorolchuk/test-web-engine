@@ -10,11 +10,11 @@ namespace TestWebEngine.Service.Statistics
 {
     public class StatisticsService : IStatisticsService
     {
-        private readonly StatisticsType _statistics;
+        private static readonly StatisticsType Statistics;
 
-        public StatisticsService()
+        static StatisticsService()
         {
-            _statistics = new StatisticsType();
+            Statistics = new StatisticsType();
         }
 
         public bool UpdateStatistics(DateTime? date, double? score)
@@ -27,15 +27,27 @@ namespace TestWebEngine.Service.Statistics
             {
                 throw new ArgumentNullException("score");
             }
-            _statistics.CompletedTestsCount++;
-            _statistics.LastTestCompleted = date;
-            if (_statistics.CompletedTestsCount != null)
-                _statistics.AverageTestScore += score.Value/_statistics.CompletedTestsCount.Value;
+            if (Statistics.CompletedTestsCount != null)
+            {
+                Statistics.CompletedTestsCount++;
+            }
             else
             {
-                _statistics.AverageTestScore = score.Value;
+                Statistics.CompletedTestsCount = 1;
+            }
+            Statistics.LastTestCompleted = date;
+            if (Statistics.CompletedTestsCount != null)
+                Statistics.AverageTestScore += score.Value/Statistics.CompletedTestsCount.Value;
+            else
+            {
+                Statistics.AverageTestScore = score.Value;
             }
             return true;
+        }
+
+        public StatisticsType GetStatistics()
+        {
+            return Statistics;
         }
     }
 }

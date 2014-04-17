@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="84b29ca7-1a44-43d8-95a7-0a3018ed7e52" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:2028/StatisticsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StatisticsService.xsd" MetadataType="Schema" ID="300a2a4a-1d76-473a-8c93-5c7990280008" SourceId="1" SourceUrl="http://localhost:2028/StatisticsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="StatisticsService1.xsd" MetadataType="Schema" ID="23795821-7e45-4501-bd67-ae63c4ba3d8b" SourceId="1" SourceUrl="http://localhost:2028/StatisticsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="StatisticsService2.xsd" MetadataType="Schema" ID="147121f1-1794-45e3-b308-dd6c070a0d91" SourceId="1" SourceUrl="http://localhost:2028/StatisticsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="StatisticsService.wsdl" MetadataType="Wsdl" ID="65b25a31-ef9f-4cd2-ae6a-f72d2d9abbf6" SourceId="1" SourceUrl="http://localhost:2028/StatisticsService.svc?wsdl" />
+    <MetadataFile FileName="StatisticsService.disco" MetadataType="Disco" ID="e21787ab-7b57-4e2b-a8d5-c4687956ef06" SourceId="1" SourceUrl="http://localhost:2028/StatisticsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
