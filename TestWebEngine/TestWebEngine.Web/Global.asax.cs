@@ -14,7 +14,7 @@ namespace TestWebEngine.Web
 {
     public class Global : HttpApplication
     {
-        void Application_Start(object sender, EventArgs e)
+        protected void Application_Start(object sender, EventArgs e)
         {
             AreaRegistration.RegisterAllAreas();
             
@@ -22,7 +22,6 @@ namespace TestWebEngine.Web
             FilterConfig.RegisterFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);   
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            
         }
     }
 }
