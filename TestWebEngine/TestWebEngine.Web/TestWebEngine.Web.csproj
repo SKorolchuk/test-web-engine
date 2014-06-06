@@ -169,10 +169,13 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Custom\Core\core.css">
+      <DependentUpon>core.less</DependentUpon>
+    </Content>
     <Content Include="Content\Custom\Home\home.css">
       <DependentUpon>home.less</DependentUpon>
     </Content>
-    <Content Include="Content\Custom\Home\list-animation.css">
+    <Content Include="Content\Custom\Core\list-animation.css">
       <DependentUpon>list-animation.less</DependentUpon>
     </Content>
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
@@ -263,8 +266,9 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\Custom\Home\app.js" />
-    <Content Include="Scripts\Custom\Home\controllers.js" />
+    <Content Include="Scripts\Custom\Core\app.js" />
+    <Content Include="Scripts\Custom\Core\controllers.js" />
+    <Content Include="Scripts\Custom\Tests\testControllers.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -278,9 +282,13 @@
     <Content Include="Content\Custom\Home\home.css.map">
       <DependentUpon>home.css</DependentUpon>
     </Content>
-    <Content Include="Content\Custom\Home\list-animation.less" />
-    <Content Include="Content\Custom\Home\list-animation.css.map">
+    <Content Include="Content\Custom\Core\list-animation.less" />
+    <Content Include="Content\Custom\Core\list-animation.css.map">
       <DependentUpon>list-animation.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Custom\Core\core.less" />
+    <Content Include="Content\Custom\Core\core.css.map">
+      <DependentUpon>core.css</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -560,18 +568,20 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\QuestionAPI\SingleAnswerTypeController.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
-    <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
-    <Compile Include="ViewModels\ExternalLoginListViewModel.cs" />
-    <Compile Include="ViewModels\ForgotPasswordViewModel.cs" />
-    <Compile Include="ViewModels\LoginViewModel.cs" />
-    <Compile Include="ViewModels\ManageUserViewModel.cs" />
-    <Compile Include="ViewModels\RegisterViewModel.cs" />
-    <Compile Include="ViewModels\ResetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\Account\AccountViewModel.cs" />
+    <Compile Include="ViewModels\Account\ExternalLoginConfirmationViewModel.cs" />
+    <Compile Include="ViewModels\Account\ExternalLoginListViewModel.cs" />
+    <Compile Include="ViewModels\Account\ForgotPasswordViewModel.cs" />
+    <Compile Include="ViewModels\Account\LoginViewModel.cs" />
+    <Compile Include="ViewModels\Account\ManageUserViewModel.cs" />
+    <Compile Include="ViewModels\Account\RegisterViewModel.cs" />
+    <Compile Include="ViewModels\Account\ResetPasswordViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -599,6 +609,8 @@
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
     <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Shared\_AccountToolbar.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -608,6 +620,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Custom\Home\" />
     <Folder Include="Views\Error\" />
   </ItemGroup>
   <ItemGroup>

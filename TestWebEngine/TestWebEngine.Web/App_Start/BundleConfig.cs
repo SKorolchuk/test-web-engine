@@ -11,7 +11,8 @@ namespace TestWebEngine.Web
 			#region Libraries
 
 			#region Styles
-			bundleTable.Add(new StyleBundle("~/Content/Custom/Home").Include("~/Content/Custom/Home/home.less", "~/Content/Custom/Home/list-animation.less"));
+			bundleTable.Add(new StyleBundle("~/Content/Custom/Home").Include("~/Content/Custom/Home/home.less"));
+			bundleTable.Add(new StyleBundle("~/Content/Custom/Core").Include("~/Content/Custom/Core/list-animation.less", "~/Content/Custom/Core/core.less"));
 			bundleTable.Add(new StyleBundle("~/Content/bootstrap").Include("~/Content/bootstrap.css"));
 			bundleTable.Add(new StyleBundle("~/Content/bootstrap-theme").Include("~/Content/bootstrap-theme.css"));
 			bundleTable.Add(new StyleBundle("~/Content/jquery-ui")
@@ -64,9 +65,10 @@ namespace TestWebEngine.Web
 				"~/Scripts/angular-scenario.js",
 				"~/Scripts/angular-touch.js"));
 
-			bundleTable.Add(new ScriptBundle("~/Scripts/Custom/Home")
-				.Include("~/Scripts/Custom/Home/app.js",
-					"~/Scripts/Custom/Home/controllers.js"));
+			bundleTable.Add(new ScriptBundle("~/Scripts/Custom/Core")
+				.Include("~/Scripts/Custom/Core/app.js",
+					"~/Scripts/Custom/Core/controllers.js",
+					"~/Scripts/Custom/Tests/testControllers.js"));
 			#endregion
 
 			#endregion

@@ -1,4 +1,4 @@
-﻿namespace TestWebEngine.Web.ViewModels
+﻿namespace TestWebEngine.Web.ViewModels.Account
 {
     public class ExternalLoginListViewModel
     {

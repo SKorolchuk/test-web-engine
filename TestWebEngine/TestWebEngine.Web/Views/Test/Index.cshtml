@@ -1,0 +1,29 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h6>{{message}}</h6>
+
+<div class="input-group">
+    <span class="input-group-addon">Search by test name</span>
+    <input type="text" class="form-control" placeholder="Test Name" ng-model="testSearchQuery">
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <th>#</th>
+        <th>Name</th>
+        <th>Questions Count</th>
+        <th>Сomplexity</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="test in tests| filter:testSearchQuery">
+            <td>{{$index+1}}</td>
+            <td>{{test.name}}</td>
+            <td>{{test.questions.length}}</td>
+            <td>{{test.complexity}}</td>
+        </tr>
+    </tbody>
+</table>

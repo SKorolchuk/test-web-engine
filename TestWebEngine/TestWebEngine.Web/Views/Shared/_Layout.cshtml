@@ -19,6 +19,7 @@
         @Styles.Render("~/Content/bootstrap")
         @Styles.Render("~/Content/bootstrap-theme")
         @Styles.Render("~/Content/jquery-ui")
+        @Scripts.Render("~/Scripts/Custom/Core")
         @RenderSection("HeadScripts", false)
         @RenderSection("HeadStyles", false)
     </head>
@@ -39,10 +40,10 @@
                                 <a ng-href="#{{link.path}}">{{link.name}}</a>
                             </li>
                         </ul>
+                        @Html.Partial("_AccountToolbar")
                     </div>
                 </div>
             </nav>
-
         </div>
         <div id="layout-body">
             @RenderBody()
@@ -51,6 +52,7 @@
             Copyright by SKorolchuk 2014
         </footer>
         @RenderSection("BodyScripts", false)
+        @Styles.Render("~/Content/Custom/Core")
         @RenderSection("BodyStyles", false)
     </body>
 </html>

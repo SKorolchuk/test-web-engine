@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
@@ -6,6 +7,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using TestWebEngine.Data.Contexts.Authorization;
 using TestWebEngine.Web.ViewModels;
+using TestWebEngine.Web.ViewModels.Account;
 
 namespace TestWebEngine.Web.Controllers
 {
@@ -42,6 +44,18 @@ namespace TestWebEngine.Web.Controllers
         {
             ViewBag.ReturnUrl = returnUrl;
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult AccountInfo(string userName)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        public ActionResult AccountInfo(AccountViewModel model)
+        {
+            throw new NotImplementedException();
         }
 
         //
@@ -98,7 +112,7 @@ namespace TestWebEngine.Web.Controllers
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("StartUp", "Home");
                 }
                 else
                 {
@@ -426,14 +440,10 @@ namespace TestWebEngine.Web.Controllers
             return View(model);
         }
 
-        //
-        // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("StartUp", "Home");
         }
 
         //
@@ -519,7 +529,7 @@ namespace TestWebEngine.Web.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("StartUp", "Home");
             }
         }
 

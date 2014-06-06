@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace TestWebEngine.Web.ViewModels
+namespace TestWebEngine.Web.ViewModels.Account
 {
     public class RegisterViewModel
     {
