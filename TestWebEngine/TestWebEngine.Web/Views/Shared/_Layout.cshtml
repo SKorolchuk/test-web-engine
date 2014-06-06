@@ -3,10 +3,10 @@
     Layout = null;
 }
 <!DOCTYPE html>
-<html lang="en" ng-app="homeApp">
+<html lang="en" data-ng-app="homeApp">
     <head>
         <meta name="viewport" content="width=device-width" />
-        <title>@ViewBag.Title</title>
+        <title data-ng-bind="page.title"></title>
         @Scripts.Render("~/Scripts/jquery")
         @Scripts.Render("~/Scripts/jquery-ui")
         @Scripts.Render("~/Scripts/jquery-signalR")
@@ -22,12 +22,35 @@
         @RenderSection("HeadScripts", false)
         @RenderSection("HeadStyles", false)
     </head>
-<body>
-    @RenderBody()
-    <footer>
-        
-    </footer>
-    @RenderSection("BodyScripts", false)
-    @RenderSection("BodyStyles", false)
-</body>
+    <body>
+        <div id="layout-header-menu">
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#layout-header-menu-body">
+                            <span class="sr-only">Toggle navigation</span>
+                        </button>
+                        <a class="navbar-brand" href="#">Test Engine</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="layout-header-menu-body">
+                        <ul class="nav navbar-nav">
+                            <li class="animate-repeat" ng-repeat="link in page.links">
+                                <a ng-href="#{{link.path}}">{{link.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+        <div id="layout-body">
+            @RenderBody()
+        </div>
+        <footer>
+            Copyright by SKorolchuk 2014
+        </footer>
+        @RenderSection("BodyScripts", false)
+        @RenderSection("BodyStyles", false)
+    </body>
 </html>

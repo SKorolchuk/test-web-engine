@@ -36,6 +36,12 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -46,12 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EfDataObjectContext.cs" />
-    <Compile Include="IDbContext.cs" />
+    <Compile Include="Contexts\Authorization\EfAuthorizationContext.cs" />
+    <Compile Include="Contexts\Authorization\User.cs" />
+    <Compile Include="Contexts\Authorization\User_Mapping.cs" />
+    <Compile Include="Contexts\EfDataObjectContext.cs" />
+    <Compile Include="Contexts\IDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <Compile Include="Contexts\Authorization\User.Extentions.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -59,6 +69,9 @@
       <Project>{e48dec78-f39d-49be-bdb0-ca7a41ec5f7b}</Project>
       <Name>TestWebEngine.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

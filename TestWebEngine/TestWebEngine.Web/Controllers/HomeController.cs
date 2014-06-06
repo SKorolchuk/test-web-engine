@@ -7,6 +7,7 @@ using TestWebEngine.Web.Extentions.StatisticsServices;
 
 namespace TestWebEngine.Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         public ActionResult StartUp()

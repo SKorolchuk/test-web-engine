@@ -6,6 +6,7 @@ namespace TestWebEngine.Web
     {
         public static void RegisterFilters(GlobalFilterCollection filters)
         {
+            filters.Add(new HandleErrorAttribute());
         }
     }
 }
